@@ -16,28 +16,29 @@
     <img src="../img/bg.webp" alt="background">
   </section>
   <aside class="page__sidebar">
-    <div class="sidebar-form">
-
-      <div class="sidebar-form__signup">
-        <header class="sidebar-form__header">
-          <h2 class="sidebar-form__title">Sign In</h2>
-        </header>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-email">
-          <input type="email" class="sidebar-form__input" placeholder="Email">
+    <div class="sidebar">
+      <header class="form-title form-title_with-link form-title_sing-in">
+        <a class="form-title__link" href="#"></a>
+        <span class="form-title__text">Sign In</span>
+      </header>
+      <form class="form" action="#" >
+        <div class="form__inputs">
+          <div class="form__input-wrapper form__input-wrapper-email">
+            <input type="email" class="form__input form__input_email" placeholder="Email" >
+          </div>
+          <div class="form__input-wrapper form__input-wrapper-password form__input-wrapper_sign-in">
+            <input type="password" class="form__input form__input_password form__input_error" placeholder="Password" >
+            <img src="../img/eye-flash.svg" class="eye" alt="eye">
+            <p class="input-error">Password contain unsupported characters</p>
+          </div>
         </div>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-password">
-          <input type="password" class="sidebar-form__input" placeholder="Password">
-        </div>
-        <div class="sidebar-form__btn">
-          <button>Sign In</button>
-          <img src="../img/arrow-right.svg" alt="arrow">
-        </div>
-        <a href="#" class="sidebar-form__to-restore sidebar-form__link">Forgot Password?</a>
-      </div>
-      <div class="sidebar-form__redirect">
-        <span>Don’t have an account?</span>
-        <a href="#" class="sidebar-form__link">Sign up</a>
-      </div>
+        <button class="form__btn" type="submit">Sign In</button>
+        <a class="link link_forgot" href="./restore-password.html">Forgot Password?</a>
+      </form>
+      <footer class="form-footer">
+        <span class="form-footer__text">Don’t have an account?</span>
+        <a href="./sign-up.html" class="link link_footer">Sign up</a>
+      </footer>
     </div>
   </aside>
 </main>

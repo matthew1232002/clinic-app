@@ -16,34 +16,36 @@
     <img src="../img/bg.webp" alt="background">
   </section>
   <aside class="page__sidebar">
-    <div class="sidebar-form">
-      <div class="sidebar-form__signup">
-        <header class="sidebar-form__header">
-          <h2 class="sidebar-form__title">Sign Up</h2>
-        </header>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-name">
-          <input type="text" class="sidebar-form__input" placeholder="First Name">
+    <div class="sidebar">
+      <header class="form-title form-title_with-link">
+        <a class="form-title__link" href="#"></a>
+        <span class="form-title__text">Sign Up</span>
+      </header>
+      <form class="form" action="#" >
+        <div class="form__inputs">
+          <div class="form__input-wrapper form__input-wrapper-name">
+            <input type="text" class="form__input form__input_name" placeholder="First Name">
+          </div>
+          <div class="form__input-wrapper form__input-wrapper-name">
+            <input type="text" class="form__input form__input_name" placeholder="Last Name">
+          </div>
+          <div class="form__input-wrapper form__input-wrapper-email">
+            <input type="email" class="form__input form__input_email" placeholder="Email" >
+          </div>
+          <div class="form__input-wrapper form__input-wrapper-password">
+            <input type="password" class="form__input form__input_password" placeholder="Password" >
+            <img src="../img/eye-flash.svg" class="eye" alt="eye">
+          </div>
+          <div class="form__input-wrapper form__input-wrapper-confirm form__input-wrapper_sign-up">
+            <input type="password" class="form__input form__input_confirm" placeholder="Confirm Password">
+            <img src="../img/eye-flash.svg" class="eye" alt="eye">
+          </div>
         </div>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-name">
-          <input type="text" class="sidebar-form__input" placeholder="Last Name">
-        </div>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-email">
-          <input type="email" class="sidebar-form__input" placeholder="Email">
-        </div>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-password">
-          <input type="password" class="sidebar-form__input" placeholder="Password">
-        </div>
-        <div class="sidebar-form__input-wrapper sidebar-form__input-wrapper-confirm">
-          <input type="password" class="sidebar-form__input" placeholder="Confirm Password">
-        </div>
-        <div class="sidebar-form__btn">
-          <button>Sign Up</button>
-          <img src="../img/arrow-right.svg" alt="arrow">
-        </div>
-      </div>
-      <footer class="sidebar-form__redirect">
-        <span>Already have an account?</span>
-        <a href="#" class="sidebar-form__link">Sign in</a>
+        <button class="form__btn" type="submit">Sign Up</button>
+      </form>
+      <footer class="form-footer">
+        <span class="form-footer__text">Already have an account?</span>
+        <a href="./sign-in.html" class="link link_footer">Sign in</a>
       </footer>
     </div>
   </aside>
