@@ -1,0 +1,251 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  background: #E4EBFF;
+}
+
+.wrapper {
+  min-height: 100%;
+  padding: 0 64px 48px 64px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+}
+.logo__img {
+  padding-right: 4px;
+}
+.logo__text {
+  font-weight: 600;
+  padding: 4px 0 0 0;
+}
+
+.user {
+  display: flex;
+}
+.user__text {
+  padding: 0 16px 0 0;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.user__profession {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #A1ABC9;
+}
+.user__img {
+  position: relative;
+  width: 40px;
+}
+.user__img::before {
+  content: "";
+  display: block;
+  background: #34C197;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.user__img::after {
+  content: "";
+  border-right: 11px solid #E4EBFF;
+  border-bottom: 11px solid #E4EBFF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.main {
+  background: #F9FAFF;
+  border-radius: 16px;
+  padding: 40px 16px 0 48px;
+}
+
+.controllers {
+  margin-bottom: 56px;
+}
+
+.btn {
+  background: #FFFFFF;
+  color: #7297FF;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  margin: 0 12px 0 0;
+  padding: 12px 0;
+  width: 160px;
+}
+.btn_active {
+  background: #7297FF;
+  color: #FFFFFF;
+}
+.btn_header {
+  margin: 0 12px 0 0;
+  padding: 12px 0;
+  width: 160px;
+}
+
+.patients-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 36px 32px 0;
+}
+.patients-title__text {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.search {
+  display: flex;
+}
+.search__input {
+  margin: 0 48px 0 0;
+}
+.search__input input {
+  background: url(../../img/search.svg) no-repeat;
+  background-position-y: center;
+  width: 93px;
+  border: none;
+  padding-left: 25px;
+}
+.search__input input:focus {
+  outline: none;
+}
+.search__input input::placeholder {
+  font-size: 15px;
+  line-height: 21px;
+  color: #A1ABC9;
+}
+.search__form {
+  display: flex;
+  position: relative;
+}
+.search__text {
+  font-size: 15px;
+  line-height: 21px;
+  color: #A1ABC9;
+  padding: 2px 16px 0 0;
+}
+.search__list {
+  width: 70px;
+}
+.search__list.is-active .search__items {
+  display: block;
+}
+.search__header {
+  cursor: pointer;
+  background: url(../../img/arrow-up.svg) no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+}
+.search__current-value {
+  color: #7297FF;
+  font-size: 15px;
+  line-height: 21px;
+}
+.search__items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 8px;
+  background: #F9FAFF;
+  display: none;
+}
+.search__item {
+  font-size: 15px;
+  line-height: 21px;
+  cursor: pointer;
+  padding: 10px 96px 10px 24px;
+}
+.search__item:hover {
+  color: #7297FF;
+}
+
+.patients-list {
+  display: grid;
+  gap: 24px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(406px, 1fr));
+  height: 690px;
+  background-color: #F9FAFF;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0 32px 0 0;
+  /* полоса прокрутки (скроллбар) */
+  /* ползунок скроллбара */
+}
+.patients-list::-webkit-scrollbar {
+  width: 12px;
+  /* ширина для вертикального скролла */
+  height: auto;
+  /* высота для горизонтального скролла */
+  background-color: rgba(220, 224, 236, 0.3);
+}
+.patients-list::-webkit-scrollbar-thumb {
+  background-color: rgba(220, 224, 236, 0.5);
+  border-radius: 8px;
+}
+
+.patient {
+  background: #fff;
+  margin: 0 auto;
+  padding: 24px 32px 0 32px;
+  box-shadow: 0 4px 32px rgba(218, 228, 255, 0.24);
+  border-radius: 12px;
+}
+.patient__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.patient__info {
+  display: flex;
+}
+.patient__img {
+  margin-right: 16px;
+}
+.patient__text {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.patient__status {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #A1ABC9;
+}
+.patient__footer {
+  font-size: 15px;
+}
+.patient__time {
+  font-weight: 600;
+  line-height: 19px;
+  margin-bottom: 16px;
+  background: url(../../img/patient-time.svg) no-repeat;
+  background-position-y: center;
+  padding-left: 30px;
+}
+.patient__description {
+  line-height: 21px;
+  background: url(../../img/patient-description.svg) no-repeat;
+  background-position-y: top;
+  padding-left: 30px;
+}
+
+/*# sourceMappingURL=doctor-patients-page.css.map */

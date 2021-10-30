@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -58,6 +59,12 @@ body {
   position: relative;
   padding: 0;
 }
+.form__input-wrapper_error .input-error {
+  display: block;
+}
+.form__input-wrapper_error .form__input {
+  border: 1px solid #F6657F;
+}
 .form__input-wrapper_sign-up {
   margin: 0 0 64px 0;
 }
@@ -96,9 +103,6 @@ body {
     width: 100%;
     padding: 9px 47px;
   }
-}
-.form__input_error {
-  border: 1px solid #F6657F;
 }
 .form__input_name {
   background: url(../img/user.svg) no-repeat;
@@ -182,9 +186,6 @@ body {
   .form-title_sing-in {
     margin: 38px 0 24px 0;
   }
-  .form-title_sing-in .sidebar-form__input-wrapper:last-child {
-    margin: 0 0 82px 0;
-  }
 }
 .form-title__text {
   font-size: 24px;
@@ -244,6 +245,17 @@ body {
   color: #F6657F;
   position: absolute;
   bottom: -23px;
+  display: none;
+}
+
+/* удаление иконки очистки поля в IE */
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+/* удаление иконки отображения пароля в IE */
+input[type=password]::-ms-reveal {
+  display: none;
 }
 
 /*# sourceMappingURL=sign-up.css.map */

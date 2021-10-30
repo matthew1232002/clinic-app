@@ -1,47 +1,49 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!--<!doctype html>-->
+<!--<html class="no-js" lang="">-->
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/null.css">
-  <link rel="stylesheet" href="../css/sign-in.css">
-</head>
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <title></title>-->
+<!--  <meta name="description" content="">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <link rel="stylesheet" href="../css/null.css">-->
+<!--  <link rel="stylesheet" href="../css/sign-in.css">-->
+<!--</head>-->
 
-<body>
-<main class="wrapper">
+<!--<body>-->
+<main class="wrapper" id="sign-in">
   <section class="page__background-image">
-    <img src="../img/bg.webp" alt="background">
+    <img src="../itrex/img/bg.webp" alt="background">
   </section>
   <aside class="page__sidebar">
     <div class="sidebar">
       <header class="form-title form-title_sing-in">
         <span class="form-title__text">Sign In</span>
       </header>
-      <form class="form" action="#" >
+      <form class="form" action="" >
         <div class="form__inputs">
           <div class="form__input-wrapper form__input-wrapper-email">
-            <input type="email" class="form__input form__input_email" placeholder="Email" >
+            <input id="email" type="email" class="form__input form__input_email" placeholder="Email" >
+            <p class="input-error"></p>
           </div>
           <div class="form__input-wrapper form__input-wrapper-password form__input-wrapper_sign-in">
-            <input type="password" class="form__input form__input_password form__input_error" placeholder="Password" >
-            <img src="../img/eye-flash.svg" class="eye" alt="eye">
-            <p class="input-error">Password contain unsupported characters</p>
+            <input id="password" type="password" class="form__input form__input_password" placeholder="Password" >
+            <img src="../itrex/img/eye-flash.svg" class="eye" alt="eye">
+            <p class="input-error"></p>
           </div>
         </div>
         <button class="form__btn" type="submit">Sign In</button>
-        <a class="link link_forgot" href="./restore-password.html">Forgot Password?</a>
+        <a class="link link_forgot" >Forgot Password?</a>
       </form>
       <footer class="form-footer">
         <span class="form-footer__text">Don’t have an account?</span>
-        <a href="./sign-up.html" class="link link_footer">Sign up</a>
+        <a  class="link link_footer" id="toSignUp">Sign up</a>
       </footer>
     </div>
   </aside>
 </main>
-<script src="../js/main.js"></script>
-</body>
+<!--<script src="../MVC/mvc.js"></script>-->
+<!--<script src="../js/validation/sign-in-validation.js"></script>-->
+<!--</body>-->
 
-</html>
+<!--</html>-->

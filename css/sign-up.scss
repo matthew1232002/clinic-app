@@ -60,6 +60,15 @@ body {
     position: relative;
     padding: 0;
 
+    &_error{
+      .input-error{
+        display: block;
+      }
+      .form__input{
+        border: 1px solid #F6657F;
+      }
+    }
+
     &_sign-up {
       margin: 0 0 64px 0;
     }
@@ -100,9 +109,9 @@ body {
       padding: 9px 47px;
     }
 
-    &_error{
-      border: 1px solid #F6657F;
-    }
+    //&_error{
+    //  border: 1px solid #F6657F;
+    //}
     &_name {
       background: url(../img/user.svg) no-repeat;
       background-position-y: center;
@@ -182,9 +191,9 @@ body {
     margin: 270px 0 40px 0;
     @media (max-width: $md5 + px) {
       margin: 38px 0 24px 0;
-      .sidebar-form__input-wrapper:last-child{
-        margin: 0 0 82px 0;
-      }
+      //.sidebar-form__input-wrapper:last-child{
+      //  margin: 0 0 82px 0;
+      //}
     }
   }
   //&_with_link{
@@ -251,4 +260,15 @@ body {
   color: #F6657F;
   position: absolute;
   bottom: -23px;
+  display: none;
+}
+
+/* удаление иконки очистки поля в IE */
+input[type="text"]::-ms-clear {
+  display: none;
+}
+
+/* удаление иконки отображения пароля в IE */
+input[type="password"]::-ms-reveal {
+  display: none;
 }

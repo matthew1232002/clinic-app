@@ -5,6 +5,7 @@
   "license": "ISC",
   "author": "matthew",
   "scripts": {
+    "start": "parcel public/doctor-patients-page.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "main": "index.js",
