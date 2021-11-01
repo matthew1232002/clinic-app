@@ -95,7 +95,9 @@ body {
   background: url(../img/eye-flash.svg);
 }
 .form__input-wrapper .eye_visible {
-  background: url(../img/search.svg);
+  width: 30px;
+  height: 28px;
+  background: url(../img/eye1.png)no-repeat;
 }
 .form__input {
   height: 56px;
