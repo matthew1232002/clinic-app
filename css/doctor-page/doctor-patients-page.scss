@@ -1,3 +1,6 @@
+$md1: 769;
+$md2: 600;
+
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +12,12 @@ body {
 .wrapper {
   min-height: 100%;
   padding: 0 64px 48px 64px;
-  &_doctor{
+  @media (max-width: $md2 + px) {
+    padding: 0;
+
+  }
+
+  &_doctor {
     //height: 100%;
     //background: #E4EBFF;
   }
@@ -19,6 +27,9 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+  @media (max-width: $md2 + px) {
+    padding: 20px 24px;
+  }
 }
 
 .logo {
@@ -43,6 +54,9 @@ body {
     font-size: 15px;
     font-weight: 600;
     line-height: 19px;
+    @media (max-width: $md2 + px) {
+      display: none;
+    }
   }
 
   &__profession {
@@ -85,10 +99,16 @@ body {
   background: #F9FAFF;
   border-radius: 16px;
   padding: 40px 16px 0 48px;
+  @media (max-width: $md2 + px) {
+    padding: 40px 24px 0 24px;
+  }
 }
 
 .controllers {
   margin-bottom: 56px;
+  @media (max-width: $md2 + px) {
+    margin-bottom: 40px;
+  }
 }
 
 .btn {
@@ -111,6 +131,9 @@ body {
     margin: 0 12px 0 0;
     padding: 12px 0;
     width: 160px;
+    @media (max-width: $md2 + px) {
+      width: 120px;
+    }
   }
 }
 
@@ -119,10 +142,17 @@ body {
   justify-content: space-between;
   margin: 0 36px 32px 0;
 
+  @media (max-width: $md2 + px) {
+    margin: 0 0 16px 0;
+  }
   &__text {
     font-size: 24px;
     font-weight: 600;
     line-height: 26px;
+    @media (max-width: $md2 + px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -130,16 +160,16 @@ body {
   display: flex;
 
   &__input {
-    margin: 0 48px 0 0;
+    margin: 0 18px 0 0;
+    background: url(../../img/search.svg) no-repeat;
+    background-position-y: center;
+    padding-left: 30px;
 
     input {
-      background: url(../../img/search.svg) no-repeat;
-      background-position-y: center;
-      width: 93px;
+      width: 55px;
       border: none;
-      padding-left: 25px;
 
-      &:focus{
+      &:focus {
         outline: none;
       }
 
@@ -147,6 +177,10 @@ body {
         font-size: 15px;
         line-height: 21px;
         color: #A1ABC9;
+      }
+
+      @media (max-width: $md1 + px) {
+        display: none;
       }
     }
   }
@@ -156,17 +190,33 @@ body {
     position: relative;
   }
 
+  &__icon {
+    background: url(../../img/select__icon.svg) no-repeat;
+    padding-left: 30px;
+    display: none;
+    @media (max-width: $md1 + px) {
+      display: block;
+    }
+  }
+
   &__text {
     font-size: 15px;
     line-height: 21px;
     color: #A1ABC9;
     padding: 2px 16px 0 0;
+    @media (max-width: $md1 + px) {
+      display: none;
+    }
   }
 
   &__list {
     width: 70px;
-    &.is-active{
-      .search__items{
+    @media (max-width: $md1 + px) {
+      display: none;
+    }
+
+    &.is-active {
+      .search__items {
         display: block;
       }
     }
@@ -204,37 +254,6 @@ body {
       color: #7297FF;
     }
   }
-
-  //&__select {
-  //  -webkit-appearance: none;
-  //  -moz-appearance: none;
-  //  appearance: none;
-  //  border: none;
-  //  background: url(../../img/arrow-up.svg) no-repeat;
-  //  background-position-y: center;
-  //  background-position-x: right;
-  //  padding: 0 16px 0 16px;
-  //  color: #7297FF;
-  //  outline: none;
-  //
-  //
-  //  &:active {
-  //    border: none;
-  //  }
-  //
-  //  &:active {
-  //    border: none;
-  //  }
-  //}
-
-  //&__option {
-  //  color: black;
-  //  background: #F9FAFF;
-  //
-  //  &:hover {
-  //    background: #F9FAFF;
-  //  }
-  //}
 }
 
 .patients-list {
@@ -247,8 +266,16 @@ body {
   overflow-x: hidden;
   padding: 0 32px 0 0;
 
+  @media (max-width: $md2 + px) {
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+
   /* полоса прокрутки (скроллбар) */
   &::-webkit-scrollbar {
+    @media (max-width: $md2 + px) {
+      display: none;
+    }
     width: 12px; /* ширина для вертикального скролла */
     height: auto; /* высота для горизонтального скролла */
     background-color: rgba(220, 224, 236, 0.3);;
@@ -293,6 +320,21 @@ body {
     font-weight: 500;
     line-height: 17px;
     color: #A1ABC9;
+    position: relative;
+    padding-left: 15px;
+    &::before{
+      content: "";
+      display: block;
+      background: #34C197;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 999;
+      transform: translateY(-50%);
+    }
   }
 
   &__footer {

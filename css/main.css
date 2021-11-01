@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -18,11 +19,8 @@ body {
 
 .page__background-image {
   width: 100%;
-}
-.page__background-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  background: url(../img/bg.webp) no-repeat;
+  background-size: cover;
 }
 
 .page__sidebar {
@@ -58,6 +56,15 @@ body {
   position: relative;
   padding: 0;
 }
+.form__input-wrapper_error .input-error {
+  display: block;
+}
+.form__input-wrapper_error .form__input {
+  border: 1px solid #F6657F;
+}
+.form__input-wrapper_sign-up {
+  margin: 0 0 64px 0;
+}
 .form__input-wrapper_sign-in {
   margin: 0 0 64px 0;
 }
@@ -67,6 +74,9 @@ body {
 @media (max-width: 600px) {
   .form__input-wrapper {
     margin: 0 0 25px 0;
+  }
+  .form__input-wrapper_sign-up {
+    margin: 0 0 32px 0;
   }
   .form__input-wrapper_sign-in {
     margin: 0 0 82px 0;
@@ -82,6 +92,10 @@ body {
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
+  background: url(../img/eye-flash.svg);
+}
+.form__input-wrapper .eye_visible {
+  background: url(../img/search.svg);
 }
 .form__input {
   height: 56px;
@@ -102,9 +116,6 @@ body {
     width: 100%;
     padding: 9px 47px;
   }
-}
-.form__input_error {
-  border: 1px solid #F6657F;
 }
 .form__input_name {
   background: url(../img/user.svg) no-repeat;
@@ -295,6 +306,7 @@ body {
   color: #F6657F;
   position: absolute;
   bottom: -23px;
+  display: none;
 }
 @media (max-width: 600px) {
   .input-error {
@@ -302,4 +314,14 @@ body {
   }
 }
 
-/*# sourceMappingURL=password-changed.css.map */
+/* удаление иконки очистки поля в IE */
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+/* удаление иконки отображения пароля в IE */
+input[type=password]::-ms-reveal {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -23,12 +23,14 @@ body {
 
 .page__background-image {
   width: 100%;
+  background: url(../img/bg.webp) no-repeat;
+  background-size: cover;
 
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+  //img {
+  //  height: 100%;
+  //  width: 100%;
+  //  object-fit: cover;
+  //}
 }
 
 .page__sidebar {
@@ -69,14 +71,29 @@ body {
       }
     }
 
+    &_sign-up {
+      margin: 0 0 64px 0;
+    }
+
     &_sign-in{
       margin: 0 0 64px 0;
     }
 
+    &_restore{
+      margin: 0 0 70px 0;
+    }
+
     @media (max-width: $md5 + px) {
       margin: 0 0 25px 0;
+      &_sign-up {
+        margin: 0 0 32px 0;
+      }
       &_sign-in{
         margin: 0 0 82px 0;
+      }
+
+      &_restore{
+        margin: 0 0 25px 0;
       }
     }
 
@@ -87,6 +104,10 @@ body {
       top: 50%;
       transform: translateY(-50%);
       right: 16px;
+      background: url(../img/eye-flash.svg) ;
+      &_visible{
+        background: url(../img/search.svg) ;
+      }
     }
   }
 
@@ -109,6 +130,9 @@ body {
       padding: 9px 47px;
     }
 
+    //&_error{
+    //  border: 1px solid #F6657F;
+    //}
     &_name {
       background: url(../img/user.svg) no-repeat;
       background-position-y: center;
@@ -169,11 +193,19 @@ body {
       }
     }
 
+    &_restore{
+      width: 213px;
+    }
+
     @media (max-width: $md5 + px) {
       font-size: 15px;
       height: 48px;
       width: 122px;
       padding: 0 32px 0 0;
+
+      &_restore{
+        width: 198px;
+      }
     }
   }
 }
@@ -188,23 +220,28 @@ body {
     margin: 270px 0 40px 0;
     @media (max-width: $md5 + px) {
       margin: 38px 0 24px 0;
-      //.sidebar-form__input-wrapper:last-child{
-      //  margin: 0 0 82px 0;
-      //}
+      .sidebar-form__input-wrapper:last-child{
+        margin: 0 0 82px 0;
+      }
     }
   }
-  //&_with_link{
-  //  padding-left: 30px;
-  //}
-  //&__link{
-  //  width: 10px;
-  //  height: 10px;
-  //  background: red;
-  //  position: absolute;
-  //  left: 5px;
-  //  top: 50%;
-  //  transform: translateY(-50%);
-  //}
+
+  &_restore{
+    margin: 267px 0 40px 0;
+    @media (max-width: $md5 + px) {
+      margin: 38px 0 24px 0;
+    }
+  }
+  &_with-link{
+    padding-left: 40px;
+  }
+  &__link{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 0;
+    background-image: url(../img/arrow-left.svg);
+  }
   &__text {
     font-size: 24px;
     font-weight: 600;
@@ -212,6 +249,23 @@ body {
     @media (max-width: $md5 + px) {
       font-size: 20px;
       line-height: 24px;
+    }
+  }
+  &__description{
+    margin-top: 32px;
+    margin-left: -40px;
+    font-size: 15px;
+    line-height: 19px;
+    color:#A1ABC9;
+
+    &_password-changed{
+      width: 372px;
+    }
+    @media (max-width: $md5 + px) {
+      width: 254px;
+      &_password-changed{
+        width: auto;
+      }
     }
   }
 }
@@ -250,6 +304,9 @@ body {
   @media (max-width: $md5 + px) {
     padding: 2px 0 0 0;
   }
+  &_email-example{
+    display: inline-block;
+  }
 }
 .input-error{
   font-size: 13px;
@@ -261,4 +318,14 @@ body {
   @media (max-width: $md5 + px) {
     bottom: -52px;
   }
+}
+
+/* удаление иконки очистки поля в IE */
+input[type="text"]::-ms-clear {
+  display: none;
+}
+
+/* удаление иконки отображения пароля в IE */
+input[type="password"]::-ms-reveal {
+  display: none;
 }
