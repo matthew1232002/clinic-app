@@ -16,11 +16,6 @@ body {
     padding: 0;
 
   }
-
-  &_doctor {
-    //height: 100%;
-    //background: #E4EBFF;
-  }
 }
 
 .header {
@@ -271,17 +266,15 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* полоса прокрутки (скроллбар) */
   &::-webkit-scrollbar {
     @media (max-width: $md2 + px) {
       display: none;
     }
-    width: 12px; /* ширина для вертикального скролла */
-    height: auto; /* высота для горизонтального скролла */
+    width: 12px;
+    height: auto;
     background-color: rgba(220, 224, 236, 0.3);;
   }
 
-  /* ползунок скроллбара */
   &::-webkit-scrollbar-thumb {
     background-color: rgba(220, 224, 236, 0.5);
     border-radius: 8px;

@@ -1,9 +1,4 @@
-//$md1: 1550;
-//$md2: 1200;
-//$md3: 992;
-//$md4: 860;
 $md5: 600;
-//$md6: 450;
 
 body {
   margin: 0;
@@ -25,12 +20,6 @@ body {
   width: 100%;
   background: url(../img/bg.webp) no-repeat;
   background-size: cover;
-
-  //img {
-  //  height: 100%;
-  //  width: 100%;
-  //  object-fit: cover;
-  //}
 }
 
 .page__sidebar {
@@ -130,9 +119,6 @@ body {
       padding: 9px 47px;
     }
 
-    //&_error{
-    //  border: 1px solid #F6657F;
-    //}
     &_name {
       background: url(../img/user.svg) no-repeat;
       background-position-y: center;
@@ -320,12 +306,10 @@ body {
   }
 }
 
-/* удаление иконки очистки поля в IE */
 input[type="text"]::-ms-clear {
   display: none;
 }
 
-/* удаление иконки отображения пароля в IE */
 input[type="password"]::-ms-reveal {
   display: none;
 }

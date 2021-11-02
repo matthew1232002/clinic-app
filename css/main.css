@@ -316,12 +316,11 @@ body {
   }
 }
 
-/* удаление иконки очистки поля в IE */
+
 input[type=text]::-ms-clear {
   display: none;
 }
 
-/* удаление иконки отображения пароля в IE */
 input[type=password]::-ms-reveal {
   display: none;
 }
