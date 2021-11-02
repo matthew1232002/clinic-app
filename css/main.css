@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -18,11 +19,8 @@ body {
 
 .page__background-image {
   width: 100%;
-}
-.page__background-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  background: url(../img/bg.webp) no-repeat;
+  background-size: cover;
 }
 
 .page__sidebar {
@@ -58,8 +56,20 @@ body {
   position: relative;
   padding: 0;
 }
+.form__input-wrapper_error .input-error {
+  display: block;
+}
+.form__input-wrapper_error .form__input {
+  border: 1px solid #F6657F;
+}
 .form__input-wrapper_sign-up {
   margin: 0 0 64px 0;
+}
+.form__input-wrapper_sign-in {
+  margin: 0 0 64px 0;
+}
+.form__input-wrapper_restore {
+  margin: 0 0 70px 0;
 }
 @media (max-width: 600px) {
   .form__input-wrapper {
@@ -67,6 +77,12 @@ body {
   }
   .form__input-wrapper_sign-up {
     margin: 0 0 32px 0;
+  }
+  .form__input-wrapper_sign-in {
+    margin: 0 0 82px 0;
+  }
+  .form__input-wrapper_restore {
+    margin: 0 0 25px 0;
   }
 }
 .form__input-wrapper .eye {
@@ -76,6 +92,12 @@ body {
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
+  background: url(../img/eye-flash.svg);
+}
+.form__input-wrapper .eye_visible {
+  width: 30px;
+  height: 28px;
+  background: url(../img/eye1.png)no-repeat;
 }
 .form__input {
   height: 56px;
@@ -96,9 +118,6 @@ body {
     width: 100%;
     padding: 9px 47px;
   }
-}
-.form__input_error {
-  border: 1px solid #F6657F;
 }
 .form__input_name {
   background: url(../img/user.svg) no-repeat;
@@ -157,12 +176,18 @@ body {
     right: 19px;
   }
 }
+.form__btn_restore {
+  width: 213px;
+}
 @media (max-width: 600px) {
   .form__btn {
     font-size: 15px;
     height: 48px;
     width: 122px;
     padding: 0 32px 0 0;
+  }
+  .form__btn_restore {
+    width: 198px;
   }
 }
 
@@ -186,6 +211,24 @@ body {
     margin: 0 0 82px 0;
   }
 }
+.form-title_restore {
+  margin: 267px 0 40px 0;
+}
+@media (max-width: 600px) {
+  .form-title_restore {
+    margin: 38px 0 24px 0;
+  }
+}
+.form-title_with-link {
+  padding-left: 40px;
+}
+.form-title__link {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 0;
+  background-image: url(../img/arrow-left.svg);
+}
 .form-title__text {
   font-size: 24px;
   font-weight: 600;
@@ -195,6 +238,24 @@ body {
   .form-title__text {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+.form-title__description {
+  margin-top: 32px;
+  margin-left: -40px;
+  font-size: 15px;
+  line-height: 19px;
+  color: #A1ABC9;
+}
+.form-title__description_password-changed {
+  width: 372px;
+}
+@media (max-width: 600px) {
+  .form-title__description {
+    width: 254px;
+  }
+  .form-title__description_password-changed {
+    width: auto;
   }
 }
 
@@ -237,6 +298,9 @@ body {
     padding: 2px 0 0 0;
   }
 }
+.link_email-example {
+  display: inline-block;
+}
 
 .input-error {
   font-size: 13px;
@@ -244,6 +308,21 @@ body {
   color: #F6657F;
   position: absolute;
   bottom: -23px;
+  display: none;
+}
+@media (max-width: 600px) {
+  .input-error {
+    bottom: -52px;
+  }
 }
 
-/*# sourceMappingURL=sign-up.css.map */
+
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+input[type=password]::-ms-reveal {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
