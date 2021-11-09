@@ -1,10 +1,9 @@
 import React from 'react';
 import * as Yup from "yup";
 import {Formik} from "formik";
-// import classes from "./RestoreForm.module.css";
 import Header from "./header/header";
 import InputField from "./input/InputField";
-import {StyledButton, StyledInputs, StyledText} from "./RestoreForm.styled";
+import {StyledInputs, StyledText} from "./RestoreForm.styled";
 import {StyledForm, StyledSidebar} from "./LoginPages.styled";
 import Button from "./button/Button";
 
@@ -19,7 +18,7 @@ const RestoreForm = () => {
         }}
                 validationSchema={validate}
                 onSubmit={values => (
-                    console.log(values)
+                    values
                 )}
         >
             {formik => (

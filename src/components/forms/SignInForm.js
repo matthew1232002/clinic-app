@@ -1,7 +1,6 @@
 import React from 'react';
 import * as Yup from "yup";
 import {Formik} from "formik";
-// import classes from "./SignInForm.module.css";
 import Header from "./header/header";
 import InputField from "./input/InputField";
 import Footer from "./footer/footer";
@@ -21,7 +20,7 @@ const SignInForm = () => {
             password: '',
         }} validationSchema={validate}
                 onSubmit={values => (
-                    console.log(values)
+                    values
                 )}
         >
             {formik => (

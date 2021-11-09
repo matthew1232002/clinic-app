@@ -1,5 +1,5 @@
 import React from 'react';
-// import classes from "./SignUpForm.module.css";
+
 import Header from "./header/header";
 import {Formik} from "formik";
 import InputField from "./input/InputField";
@@ -27,7 +27,7 @@ const SignUpForm = () => {
         }}
                 validationSchema={validate}
                 onSubmit={values => (
-                    console.log(values)
+                    values
                 )}
         >
             {formik => (

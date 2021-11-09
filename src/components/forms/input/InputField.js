@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 import {ErrorMessage, useField} from "formik";
-// import classes from './InputField.module.css';
 import {StyledEye, StyledInput, StyledWrapper} from "./inputField.styled";
 import Eye from '../../../assets/eye1.png';
 

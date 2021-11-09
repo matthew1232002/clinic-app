@@ -1,7 +1,7 @@
 import React from 'react';
 import {useLocation} from 'react-router-dom';
 
-// import classes from "./header.module.css";
+
 import {StyledArrow, StyledHeader, StyledText} from "./header.styled";
 
 const Header = (props) => {
